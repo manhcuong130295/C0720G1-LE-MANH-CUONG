@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <label>Amount</label><br />
+            <input type="number" name="amount" id="amount" />
+        </td>
+        <td>
+            <label>From currency</label><br />
+            <select id="from">
+                <option value="Vietnam" selected>Vietnam</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <label>To currency</label><br />
+            <select id="to">
+                <option value="USD" selected>USD</option>
+                <option value="Vietnam">Vietnam</option>
+            </select>
+        </td>
+        <td>
+        </td>
+        <td><br />
+            <input type="submit" name="convert" id="convert" onclick="convert()" value="Convert" />
+        </td>
+    </tr>
+    <tr>
+        <td>Result</td>
+        <td colspan="3"><p name="result" id="result"></p></td>
+    </tr>
+</table>
+<script>
+    function convert() {
+        //sử dụng biến result để lấy giá trị của input có id là amount
+        result = document.getElementById('amount').value;
+        //sử dụng biến from để lấy giá trị select có id là from
+        from = document.getElementById('from').value;
+        //sử dụng biến from để lấy giá trị select có id là to
+        to = document.getElementById('to').value;
+        //viết thuật toán xử lý kết quả
+        if (from == to)
+            //trường hợp giá trị chọn tại 2 ô select là như nhau thì kết quả chính bằng số nhập vào amount
+        {
+            document.getElementById("result").innerHTML = result;
+        }
+        else
+        {
+            //trường hợp chuyển từ đồng VND sang USD thì:
+            if (from == 'Vietnam' && to == 'USD')
+            {
+                //1 USD = 23500 VND
+                document.getElementById("result").innerHTML = result * (1 / 23500);
+            }
+            if (from == 'USD' && to == 'Vietnam')
+            {
+                //trường hợp chuyển từ đồng USD sang VND thì:
+                document.getElementById("result").innerHTML = result * 23500;
+            }
+        }
+    }
+</script>
+</body>
+</html>
+
+Ok
