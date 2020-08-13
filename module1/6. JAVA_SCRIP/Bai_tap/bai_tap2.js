@@ -1,3 +1,4 @@
-function alert('xin chào!') {
+function
+alert('xin chào!') {
 
 }
