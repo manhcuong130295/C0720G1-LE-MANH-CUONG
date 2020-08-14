@@ -2,30 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>tuoi cua mot nguo</title>
+    <title>pt bậc 2</title>
 </head>
 <body>
 <script>
-    let tuoi = parseInt(prompt('nhập tuổi'));
-    if ((tuoi > 0) && (tuoi < 120)) {
-        alert('là tuổi của một người');
+    let a = parseInt(prompt('enter a'));
+    let b = parseInt(prompt('enter b'));
+    let c = parseInt(prompt('enter c'));
+    let delta = b * b - 4 * a * c;
+    let x1;
+    let x2;
+    let x;
+    if (delta > 0) {
+        x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        alert('x1=' + x1 + '<br>x2=' + x2);
+    } else if (delta = 0) {
+        /* x1 = -b / (2 * a);
+         x2 = -b / (2 * a);*/
+        x = -b / (2 * a);
+        alert('x1=x2=' + x);
     } else {
-        alert('không phải tuổi một người');
+        alert('phương trình vô nghiệm');
     }
-    /*  if (0 < tuoi < 120) {
-          alert('là tuổi của một người');
-      } else {
-          alert('không phải tuổi một người');
-      }*/
-    /* if (tuoi > 0) {
-         if (tuoi < 120) {
-             alert('là tuổi của một người');
-         }
-     } else if (tuoi > 120) {
-         alert('không phải tuổi một người');
-     } else {
-         alert('không phải tuổi một người');
-     }*/
 </script>
 </body>
 </html>

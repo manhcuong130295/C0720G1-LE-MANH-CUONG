@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>pt bac nhat</title>
+    <title>tính S tam giác vuông</title>
 </head>
 <body>
 <script>
-    let a = parseInt(prompt('enter a'));
-    let b = parseInt(prompt('enter b'));
-    let s;
-    if (a != 0) {
-        s = -(b / a);
-        alert('S= ' + s);
-    } else {
-        alert('Phương trình vô nghiệm');
-    }
+    let a = parseInt(prompt('cạnh góc vuông a'));
+    let b = parseInt(prompt('cạnh góc vuông b'));
+    let s = (1 / 2) * (a * b);
+    alert('diện tích tam giác vuông này là S=' + s);
 </script>
 </body>
 </html>

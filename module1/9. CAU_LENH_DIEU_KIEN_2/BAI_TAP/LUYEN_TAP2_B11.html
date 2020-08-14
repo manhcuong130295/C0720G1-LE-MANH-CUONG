@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let thunhapTinhthue = parseFloat(prompt(' thu nhập tính theo tháng (triệu VND) '));
+    let thueTncn;
+    if (thunhapTinhthue > 80) {
+        thueTncn = thunhapTinhthue * 35 / 100;
+    } else if (thunhapTinhthue > 52) {
+        thueTncn = thunhapTinhthue * 30 / 100;
+    } else if (thunhapTinhthue > 32) {
+        thueTncn = thunhapTinhthue * 25 / 100;
+    } else if (thunhapTinhthue > 18) {
+        thueTncn = thunhapTinhthue * 20 / 100;
+    } else if (thunhapTinhthue > 10) {
+        thueTncn = thunhapTinhthue * 15 / 100;
+    } else if (thunhapTinhthue > 5) {
+        thueTncn = thunhapTinhthue * 10 / 100;
+    } else {
+        thueTncn = thunhapTinhthue * 5 / 100;
+    }
+    alert('Thuế TNCN là :' + thueTncn);
+</script>
+</body>
+</html>

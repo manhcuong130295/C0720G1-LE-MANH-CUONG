@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giá điện</title>
+</head>
+<body>
+<script>
+    let sokWh = parseFloat(prompt('điện tiêu thụ 1 tháng (kWh):'));
+    let gia;
+    if (sokWh > 400) {
+        gia = sokWh * 2927;
+    } else if (sokWh > 300) {
+        gia = sokWh * 2834;
+    } else if (sokWh > 200) {
+        gia = sokWh * 2536;
+    } else if (sokWh > 100) {
+        gia = sokWh * 2014;
+    } else if (sokWh > 50) {
+        gia = sokWh * 1734;
+    } else {
+        gia = sokWh * 1678;
+    }
+    alert('tiền điện tháng này là:' + gia);
+</script>
+</body>
+</html>
