@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xep loai</title>
+</head>
+<body>
+<script>
+    let diemKTra = parseFloat(prompt('diem kiem tra'));
+    let diemGiuaky =  parseFloat(prompt('diem thi giua ky'));
+    let diemCuoiky =  parseFloat(prompt('diem thi cuoi ky'));
+    let diemTbinh = ( diemKTra + diemGiuaky*2 + diemCuoiky*3 )/6 ;
+    if ( diemTbinh >= 8 ) {
+        alert('gioi');
+    } else if ( diemTbinh >= 6.5 ) {
+        alert( 'kha' )
+    } else if ( diemTbinh >= 5 ) {
+        alert('trung binh');
+    } else if ( diemTbinh >= 3.5 ) {
+        alert( 'yeu' )
+    } else {
+        alert('kem');
+    }
+</script>
+</body>
+</html>

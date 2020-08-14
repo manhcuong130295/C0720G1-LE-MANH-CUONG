@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hoa hong telesale</title>
+</head>
+<body>
+<script>
+    let mucFyp = parseFloat(prompt('doanh so : treuVND '));
+    let mucHoahong;
+    if (mucFyp > 100) {
+        mucHoahong = mucFyp * 10 / 100;
+    } else if (mucFyp > 70) {
+        mucHoahong = mucFyp * 8 / 100;
+    } else if (mucFyp > 55) {
+        mucHoahong = mucFyp * 7 / 100;
+    } else if (mucFyp > 40) {
+        mucHoahong = mucFyp * 5 / 100;
+    } else if (mucFyp > 30) {
+        mucHoahong = mucFyp * 4 / 100;
+    } else {
+        mucHoahong = mucFyp * 2 / 100;
+    }
+    document.write( 'Hoa hong:'+ mucHoahong + 'trieuVND');
+</script>
+</body>
+</html>
