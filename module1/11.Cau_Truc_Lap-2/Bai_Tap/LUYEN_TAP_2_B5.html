@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lãi suất ngân hàng</title>
+</head>
+<body>
+<script>
+    let soTienvay = parseInt(prompt('số tiền vay ( triệu VND)'));
+    let kyHanvaycodinh = parseInt(prompt('kỳ hạn vay (tháng)'))
+    let laiSuatthang = parseFloat(prompt('lãi suất %'));
+    let soThangvaythucte = 1;
+    let tienLai;
+    while (soThangvaythucte < kyHanvaycodinh) {
+        soTienvay = (soTienvay * laiSuatthang / 100 + soTienvay);
+        tienLai = soTienvay * laiSuatthang / 100+soTienvay;
+        soThangvaythucte++;
+    }
+    alert(' Tổng tiền =' + tienLai);
+</script>
+</body>
+</html>
+</body>
+</html>

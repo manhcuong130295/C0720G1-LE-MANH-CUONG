@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* let tong=0
+    for ( let i =0; i<30; i++){
+        for(let num = 0; num%7==0; num++){
+            let tong= tong+num;
+            alert(tong);
+        }
+
+    }*/
+    let num = 1;
+    let count = 1;
+    let tongCong = 0;
+    while (count <= 30) {
+        if (num % 7 == 0) {
+            tongCong += num;
+            count++;
+        }
+        num++;
+    }
+    alert("Tổng 30 số chia hết cho 7 đầu tiên là : " + tongCong)
+</script>
+</body>
+</html>

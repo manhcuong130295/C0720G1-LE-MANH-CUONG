@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i = 0;
+    let a = 0;
+    let b = 1;
+    let temp;
+    document.write(a + ";" + b);
+    while (i < 20) {
+        document.write(";" + (a + b));
+        temp = b;
+        b = a + b;
+        a = temp;
+        if ((a + b) % 5 == 0) {
+            alert((a + b));
+            break;
+        }
+        i++;
+
+    }
+    // document.write('tổng='+c );
+</script>
+</body>
+</html>
