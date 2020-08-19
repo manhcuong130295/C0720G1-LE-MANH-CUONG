@@ -6,12 +6,18 @@
 </head>
 <body>
 <script>
-    let t = parseFloat(prompt('nhiet do'));
-    if ( t > 100) {
-        alert( " giảm nhiệt độ");
-    } else if ( t < 20) {
-        alert(" tăng nhiệt độ")
-    }
+
+    let nhietdo = prompt("NHập nhiệt độ");
+    let check = true;
+    while (check)
+        if (nhietdo > 100) {
+            nhietdo = prompt("hãy giảm nhiệt độ!");
+        } else if (nhietdo < 20) {
+            nhietdo = prompt("hãy tăng nhiệt độ!");
+        } else {
+            check = false;
+            alert("NHiệt dộ của bạn hợp lý!")
+        }
 </script>
 </body>
 </html>
