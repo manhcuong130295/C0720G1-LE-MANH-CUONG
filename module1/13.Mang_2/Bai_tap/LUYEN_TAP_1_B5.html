@@ -7,18 +7,17 @@
 <body>
 <script>
     let n = parseInt(prompt("nhập độ dài mảng"));
-    let number = [];
-    let cnt =0;
-    number.length = n;
+    let number = new Array(n);
+    let cnt = 0;
     for (let i = 0; i < number.length; i++) {
         number[i] = parseInt(prompt("nhập vào một số nguyên"));
     }
-    for (let i = 0; i<number.length;i++) {
-        if (number[i]<0) {
+    for (let i = 0; i < number.length; i++) {
+        if (number[i] < 0) {
             cnt++;
         }
     }
-    document.write("có"+cnt+"số nguyên âm trong mảng này");
+    document.write("có \n" + cnt + "\nsố nguyên âm trong mảng này");
 </script>
 </body>
 </html>
