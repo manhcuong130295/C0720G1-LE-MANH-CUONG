@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('nhập từ cần tra cứu');
+    let vietnamese = ["cam", "táo", "dưa hấu", "dâu tây", "chuối"];
+    let english = ["orange", "apple", "watermelon", "strawberry", "banana"];
+    let result="";
+    for (let i = 0; i < english.length; i++) {
+        if (n == english[i]) {
+            result= "Nghĩa của từ "+ n +" là: "+vietnamese[i];
+            break;
+        } else {
+            result='từ bạn vừa nhập không có';
+        }
+    }
+    alert(result)
+</script>
+</body>
+</html>

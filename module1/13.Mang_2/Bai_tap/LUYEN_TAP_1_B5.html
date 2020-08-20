@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập độ dài mảng"));
+    let number = [];
+    let cnt =0;
+    number.length = n;
+    for (let i = 0; i < number.length; i++) {
+        number[i] = parseInt(prompt("nhập vào một số nguyên"));
+    }
+    for (let i = 0; i<number.length;i++) {
+        if (number[i]<0) {
+            cnt++;
+        }
+    }
+    document.write("có"+cnt+"số nguyên âm trong mảng này");
+</script>
+</body>
+</html>
