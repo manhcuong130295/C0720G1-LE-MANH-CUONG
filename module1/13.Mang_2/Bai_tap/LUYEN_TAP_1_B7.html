@@ -6,13 +6,29 @@
 </head>
 <body>
 <script>
-    let number = new Array(10);
-    for (let i = 0; i < number.length; i++) {
-        number[i] = parseInt(prompt("nhập vào các phần tử của mảng"));
+    /*   let array = [55, 55, 12, 6, 7, 8, 55, 77, 55, 99];
+       let numberV = prompt('nhập số nguyên V:');
+       let result = '';
+       for (let i = (array.length - 1); i >= 0; i--) {
+           if (numberV == array[i]) {
+               for (let j = i; j < array.length; j++) {
+                   array[j] = array[j + 1]
+               }
+               array[array.length-1]=0;
+           }
+
+       }
+       alert(array);*/
+    let array = [3, 55, 55, 55, 7, 8, 55, 77, 55, 99];
+    let numberV = parseInt(prompt('nhập số nguyên V:'));
+    for (let i = 0; i < array.length; i++) {
+        if(numberV==array[i]) {
+           array.splice(i,1,0);
+         //  i--;
+        }
+
     }
-    document.write( number.sort(function (a, b) {
-        return b - a
-    }));
+     alert(array);
 </script>
 </body>
 </html>

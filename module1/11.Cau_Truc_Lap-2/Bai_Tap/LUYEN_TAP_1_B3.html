@@ -6,19 +6,22 @@
 </head>
 <body>
 <script>
-    let i = 0;
+    let i = 3;
     let a = 0;
     let b = 1;
-    let temp;
-    document.write(a + ";" + b);
-    while (i < 18) {
-        document.write(";" + (a + b));
-        temp = b;
-        b = a + b 
-        ;
-        a = temp;
+    let c;
+    let kq = a + ',' + b
+    let tong = a + b;
+    while (i < 10) {
+        c = a + b;
+        kq += ',' + c;
+        tong += c;
+        a = b;
+        b = c;
         i++;
     }
+    alert(kq);
+    alert('tong 20 so bang:' + "\n" + tong);
 </script>
 </body>
 </html>

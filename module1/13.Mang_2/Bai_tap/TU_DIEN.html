@@ -5,20 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+<p id="display"></p>
 <script>
     let n = prompt('nhập từ cần tra cứu');
     let vietnamese = ["cam", "táo", "dưa hấu", "dâu tây", "chuối"];
     let english = ["orange", "apple", "watermelon", "strawberry", "banana"];
-    let result="";
+    //let result="";
     for (let i = 0; i < english.length; i++) {
         if (n == english[i]) {
-            result= "Nghĩa của từ "+ n +" là: "+vietnamese[i];
+            document.getElementById("display").innerHTML = "nghĩa từ này là" + vietnamese[i];
             break;
         } else {
-            result='từ bạn vừa nhập không có';
+            //result='từ bạn vừa nhập không có';
+            document.getElementById("display").innerHTML = "từ bạn nhập không có";
+
+
         }
     }
-    alert(result)
+    //alert(result)
 </script>
 </body>
 </html>

@@ -6,12 +6,19 @@
 </head>
 <body>
 <script>
-    let n = parseInt(prompt("nhập độ dài mảng"));
+   /* let n = parseInt(prompt("nhập độ dài mảng"));
     let number = new Array(n);
     for (let i = 0; i < number.length; i++) {
         number[i] = parseInt(prompt("nhập vào một số nguyên"));
     }
-    document.write(number.reverse());
+    document.write(number.reverse());*/
+   let array = [1,2,3,4,5,6,7,8,9]
+    for (let i =0; i<(array.length/2);i++) {
+        let temp = array[i];
+        array[i]= array[array.length-1-i];
+        array[array.length-1-i]=temp;
+
+    }
 </script>
 
 </body>

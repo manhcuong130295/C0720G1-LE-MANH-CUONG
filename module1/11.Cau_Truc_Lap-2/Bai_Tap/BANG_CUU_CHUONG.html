@@ -5,17 +5,55 @@
     <title>Title</title>
 </head>
 <body>
+<table border="1">
+    <tr>
+        <td>2*1=2</td>
+    </tr>
+</table>
 <script>
-    let sout = "<table style='text-align: center' border='1' width='900' cellspacing='2'>"
-    for (let i = 1; i <= 9; i++) {
-        sout = sout + "<tr>";
+    let bangCuuChuong = '<table border="1" >';
+    for (let i = 2; i <= 9; i++) {
+        bangCuuChuong += '<tr>';
         for (let j = 2; j <= 9; j++) {
-            sout = sout + "<td>" + j + "x" + i + "=" + i * j + "</td>";
+            bangCuuChuong += '<td style="width: 70px; height: 20px">'+j+'X'+i+'='+j*i+'</td>';
         }
-        sout = sout + "</tr>"
+        bangCuuChuong += '</tr>';
     }
-    sout = sout + "</table>";
-    document.write(sout);
+    bangCuuChuong += '</table>';
+    document.write(bangCuuChuong);
+    /*  let ten = [[1, 234, "c123@gmail.com", "Cuong", 9123456],
+          [2, 235, "1123@gmail.com", "Manh", 3123456],
+         [ 3,236,"1023@gmail.com","Le",1023456]
+      ];
+      let tableString = "<table border=\"1\">\n" +
+          "    <tr>\n" +
+          "        <th style=\"width: 40px ; width: 40px \">stt</th>\n" +
+          "        <th style=\"width: 40px ; width: 40px \">sbd</th>\n" +
+          "        <th style=\"width: 40px ; width: 40px \">email</th>\n" +
+          "        <th style=\"width: 40px ; width: 40px \">tên</th>\n" +
+          "        <th style=\"width: 40px ; width: 40px \">sđt</th>\n" +
+          "    </tr>\n";
+      for (let i = 0; i < ten.length; i++) {
+          tableString += "<tr>";
+          for (let j = 0; j <ten[i].length; j++) {
+              tableString += "<td>" + ten[i][j] + "</td>";
+          }
+          tableString += "</tr>";
+      }
+      tableString+="</tb>";
+      document.write(tableString);
+
+      /*  let sout = "<table style='text-align: center' border='1' width='900' cellspacing='2'>"
+      for (let i = 1; i <= 9; i++) {
+          sout = sout + "<tr>";
+          for (let j = 2; j <= 9; j++) {
+              sout = sout + "<td>" + j + "x" + i + "=" + i * j + "</td>";
+          }
+          sout = sout + "</tr>"
+      }
+      sout = sout + "</table>";
+      document.write(sout);*/
+
 </script>
 </body>
 </html>

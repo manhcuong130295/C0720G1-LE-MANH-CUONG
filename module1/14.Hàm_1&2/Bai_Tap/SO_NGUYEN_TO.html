@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let result = true;
+        if (number < 2) {
+            result = false;
+        } else if (number == 2) {
+            result = true;
+        } else if (number % 2 == 0) {
+            result = false;
+        } else {
+            for (i = 3; i < number; i += 2) {
+                if (number % i == 0) {
+                    result = false;
+                    break;
+                }
+            }
+            return result;
+        }
+        if (result == true) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result
+    }
+
+    let n = parseInt(prompt("Enter a number"));
+    let check = isPrime(n);
+    if (check == true) {
+        document.write("is a prime number");
+    } else {
+        document.write("is not a prime number");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MIN OF ARRAY</title>
+</head>
+<body>
+<script>
+    let array1 = [3, 5, 1, 8, -3, 7, 8];
+    let array2 = [7, 12, 6, 9, 20, 56, 89];
+    let array3 = [];
+    let array4 = [[0, 0, 0, 0, 0, 0]]
+    function minArray(array) {
+        if(array.length == 0)
+            return -1;
+        let min = array[0];
+
+        for(let i = 1; i < arr.length; i++){
+            if(arr[i] < min){
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+   /* function minOfArray(array) {
+        let min = array[0];
+        if (array.length == 0) {
+            return -1;
+            min = array[0];
+            return array.indexOf(-1);
+
+        } else if (array.length !== 0) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] < array[0]) {
+                    min = array[i];
+                }
+            }
+        }
+        return array.indexOf(array[i]);
+
+    }
+
+    let tesArray = minOfArray(array1);
+    let result = tesArray;
+    alert(result);
+
+    /*  let minArray2=minOfArray(array2);
+      let result2= minArray2;
+      alert(result);
+      let minArray3=minOfArray(array3);
+      let result3= minArray3;
+      alert(result);
+      let minArray4=minOfArray(array4);
+      let result4= minArray4;
+      alert(result);*/
+</script>
+</body>
+</html>

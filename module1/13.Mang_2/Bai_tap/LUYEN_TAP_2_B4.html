@@ -6,13 +6,19 @@
 </head>
 <body>
 <script>
-    let string = "Lê Mạnh Cường học viên codegym";
-
-    function WordCount(str) {
-        return str.split(" ").length;
+    let string = "Lê          Mạnh Cường học viên codegym";
+    let array = string.split(" ");
+    let cnt = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] !== "") {
+            cnt++;
+        }
     }
-
-    document.write("số từ trong chuỗi này là :" + "\n" + WordCount(string));
+    /* function WordCount(str) {
+         return str.split(" ").length;
+     }
+ */
+    document.write("số từ trong chuỗi này là :" + "\n" + cnt);
 </script>
 
 </body>
