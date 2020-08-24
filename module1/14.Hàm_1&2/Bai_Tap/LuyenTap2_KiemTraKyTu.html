@@ -11,20 +11,20 @@
     for (let i =0;i<array.length;i++) {
         array[i] = prompt("nhập phần tử mảng");
     }
-    let kiTu =(prompt("nhập một kí tự bất kì"));
+    let kiTu = parseFloat(prompt("nhập một kí tự bất kì"));
     document.write(kiemTra(array,kiTu));
     function kiemTra(array,kiTu) {
         let cnt = 0;
+        let result;
         for (let i =0;i<array.length;i++) {
             if (array[i]===kiTu) {
                 cnt++;
+                result= cnt;
+            } else {
+                result =  -1;
             }
         }
-        if (cnt!=0){
-            return cnt;
-        }else {
-            return -1
-        }
+        return result;
     }
 </script>
 </body>

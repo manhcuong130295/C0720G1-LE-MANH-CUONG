@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng số nguyên</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập độ dài mảng"));
+    let array = new Array(n);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = parseFloat(prompt("nhập số nguyên là phần tử của mảng"));
+        if (!Number.isInteger(array[i])) {
+            alert("xin nhập số nguyên");
+            array[i] = parseFloat(prompt("nhập số nguyên là phần tử của mảng"));
+        }
+    }
+    document.write(daoNguoc(array));
+
+    function daoNguoc(array) {
+        let newArray = array.reverse();
+        return newArray;
+    }
+</script>
+</body>
+</html>
