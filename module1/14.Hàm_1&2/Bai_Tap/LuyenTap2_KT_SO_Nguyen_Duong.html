@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên dương</title>
+</head>
+<body>
+<script>
+    function kiemTra(number) {
+        if (Number.isInteger(number) && (number > 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let a = parseFloat(prompt("Enter a number"));
+    if (kiemTra(a)) {
+        document.write(a + "\n la so nguyen duong ");
+    } else {
+        document.write(a + "\n không phai so nguyen duong");
+    }
+</script>
+</body>
+</html>

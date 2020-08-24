@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chu vi và diện tích hình tròn</title>
+</head>
+<body>
+<form>
+    <label>nhập bán kính</label>
+    <input type="text" id="bankinh" name="bankinh">
+    <input type="button" onclick="chuViVaDienTich()" value="tính">
+    <p id="kq"></p>
+</form>
+<script>
+    function chuViVaDienTich() {
+        let banKinh = parseFloat(document.getElementById("bankinh").value);
+        let chuVi = 2 * banKinh * 3.14;
+        let dienTich = banKinh * banKinh * 3.14;
+        let result = "chu vi =" + "\n" + chuVi + "<br>" + "diện tích=" + "\n" + dienTich;
+        document.getElementById("kq").innerHTML = result;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>Nhập một số</label>
+    <input type="text" id="number">
+    <input type="button" onclick="kiemTra()" value="Kiểm Tra">
+    <p id="kq"></p>
+</form>
+<script>
+    function kiemTra() {
+        let number = document.getElementById("number").value;
+        if (!isNaN(number)) {
+            document.getElementById("kq").innerHTML = "đay là kí tự số";
+        } else {
+            document.getElementById("kq").innerHTML = "không phải ký tự số"
+        }
+    }
+</script>
+</body>
+</html>

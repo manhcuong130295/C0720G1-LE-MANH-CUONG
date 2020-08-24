@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giai thừa</title>
+</head>
+<body>
+<form>
+    <label>nhập số cần tính</label>
+    <input type="text" id="number">
+    <input type="button" onclick="giaiThua()" value="Tính giai thừa">
+    <p id="kq"></p>
+</form>
+<script>
+    function giaiThua() {
+        let number = parseInt(document.getElementById("number").value);
+        let result=1;
+        for (let i = 1; i <= number; i++) {
+            result = result* i;
+        }
+        document.getElementById("kq").innerHTML = "Giai thừa số này là:\n" + result;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min 3 số nguyên bất kỳ</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Enter a"));
+    let b = parseInt(prompt("Enter b"));
+    let c = parseInt(prompt("Enter c"));
+
+    function min() {
+        let min = 0;
+        if ((a < b) && (a < c)) {
+            min = a;
+        } else if (b < c) {
+            min = b;
+        } else {
+            min = c;
+        }
+        return min;
+    }
+
+    let result = min(a, b, c);
+    alert(result);
+</script>
+</body>
+</html>
