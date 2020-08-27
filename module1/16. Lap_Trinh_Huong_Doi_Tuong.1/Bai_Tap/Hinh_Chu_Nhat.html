@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+    class Retangle {
+        constructor(x, y, width, height) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+        }
+
+        dienTich() {
+            return this.width * this.height;
+        }
+
+        chuVi() {
+            return (this.width + this.height) * 2;
+        }
+
+        createRetangle() {
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext("2d");
+            ctx.rect(100, 100, this.width, this.height);
+            ctx.stroke();
+            ctx.fillStyle = "Red";
+            ctx.fill();
+        }
+    }
+
+    let cDai = parseInt(prompt("nhập chiều dài"));
+    let cRong = parseInt(prompt("nhập chiều rộng"));
+    let retangle = new Retangle(100, 100, cDai, cRong);
+    alert("dien tich:" + retangle.dienTich() + "\n" + "chu vi :" + retangle.chuVi());
+    retangle.createRetangle();
+</script>
+</body>
+</html>
