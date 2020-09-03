@@ -5,15 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<table border="1">
-    <tr>
-        <td>2*1=2</td>
-    </tr>
+<table border="1" cellspacing="0">
 </table>
 <script>
-    let bangCuuChuong = '<table border="1" >';
-    for (let i = 2; i <= 9; i++) {
-        bangCuuChuong += '<tr>';
+    let bangCuuChuong = '<table border="1" cellspacing="0"  style="background-color: yellowgreen ;color: white">';
+    for (let i = 1; i <= 9; i++) {
+        bangCuuChuong += '<tr style="text-align: center">';
         for (let j = 2; j <= 9; j++) {
             bangCuuChuong += '<td style="width: 70px; height: 20px">'+j+'X'+i+'='+j*i+'</td>';
         }

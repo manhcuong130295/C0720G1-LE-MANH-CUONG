@@ -8,15 +8,16 @@
 <script>
     let so1 = parseInt(prompt("Nhập số nguyên thứ nhất"));
     let so2 = parseInt(prompt("Nhập số nguyên thứ hai"));
-    let array = [so1,so2];
+    let array = [so1, so2];
+
     function swapByRefer(array) {
         let tmp = array[0];
         array[0] = array[1];
         array[1] = tmp;
+        return array;
     }
-    let c = [so1, so2];
-    swapByRefer(c);
-    alert(c[0] + " " + c[1]);
+
+    alert(swapByRefer(array));
 </script>
 </body>
 </html>

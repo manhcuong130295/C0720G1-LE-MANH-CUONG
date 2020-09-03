@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let listCustomer = [];
+
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1.Add new Customer" + "\n2.Display Information Customer" + "\n3.Edit Infomation Customer" +
+            "\n4.Delete Customer" + "\n 5.Exit"));
+
+        switch (choose) {
+            case 1: {
+                addNewCustomer();
+                break;
+            }
+            case 2: {
+                displayInformationCustomer();
+                break;
+            }
+            case 3: {
+                editCustomer();
+                break;
+            }
+            case 4: {
+                deleteCustomer();
+                break;
+            }
+            case 5: {
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
+        }
+    }
+
+    function addNewCustomer() {
+        let cusInfor = [];
+        let name = prompt("input name");
+        let idCard = prompt("input idcard");
+        let birthday = prompt("input birthday");
+        let email = prompt("input email");
+        let adress = prompt("input adress");
+        let typeService = prompt("input typeservice");
+        let typeRoom = prompt("input typeroom");
+        let typeCustomer = prompt("input typecustomer ");
+        let disCount = prompt("input discount");
+        let partner = prompt("input partner");
+        let rendDay = prompt("input rendday");
+
+        cusInfor.push(name);
+        cusInfor.push(idCard);
+        cusInfor.push(birthday);
+        cusInfor.push(email);
+        cusInfor.push(adress);
+        cusInfor.push(typeService);
+        cusInfor.push(typeRoom);
+        cusInfor.push(typeCustomer);
+        cusInfor.push(disCount);
+        cusInfor.push(partner);
+        cusInfor.push(rendDay);
+
+        listCustomer.push(cusInfor);
+        alert("bạn đả thêm thành công");
+        displayMainMenu();
+    }
+
+    function displayInformationCustomer() {
+        let temp = "";
+        for (let i = 0; i < listCustomer.length; i++) {
+            temp += i + ".Name:" + listCustomer[i][0] + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        alert(
+            "Tên : " + listCustomer[chooseDisplay][0] + "\n" +
+            "CMND : " + listCustomer[chooseDisplay][1] + "\n" +
+            "Ngày sinh : " + listCustomer[chooseDisplay][2] + "\n" +
+            "Email :" + listCustomer[chooseDisplay][3] + "\n" +
+            "Địa chỉ : " + listCustomer[chooseDisplay][4] + "\n" +
+            "Loại khách hàng :" + listCustomer[chooseDisplay][5] + "\n" +
+            "Loại phòng thuê : " + listCustomer[chooseDisplay][6] + "\n" +
+            "Loại dịch vụ : " + listCustomer[chooseDisplay][7] + "\n" +
+            "Giảm giá : " + listCustomer[chooseDisplay][8] + "\n" +
+            "Số người đi : " + listCustomer[chooseDisplay][9] + "\n" +
+            "Số ngày thuê : " + listCustomer[chooseDisplay][10] + "\n");
+    }
+
+    function editCustomer() {
+        let temp = "";
+        for (let i = 0; i < listCustomer.length; i++) {
+            temp += i + ".Name:" + listCustomer[i][0] + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        let chooseEdit = parseInt(prompt(
+            "1.Tên : " + listCustomer[chooseDisplay][0] + "\n" +
+            "2.CMND : " + listCustomer[chooseDisplay][1] + "\n" +
+            "3.Ngày sinh : " + listCustomer[chooseDisplay][2] + "\n" +
+            "4.Email :" + listCustomer[chooseDisplay][3] + "\n" +
+            "5.Địa chỉ : " + listCustomer[chooseDisplay][4] + "\n" +
+            "6.Loại khách hàng :" + listCustomer[chooseDisplay][5] + "\n" +
+            "7.Loại phòng thuê : " + listCustomer[chooseDisplay][6] + "\n" +
+            "8.Loại dịch vụ : " + listCustomer[chooseDisplay][7] + "\n" +
+            "9.Giảm giá : " + listCustomer[chooseDisplay][8] + "\n" +
+            "10.Số người đi : " + listCustomer[chooseDisplay][9] + "\n" +
+            "11.Số ngày thuê : " + listCustomer[chooseDisplay][10] + "\n"));
+        switch (chooseEdit) {
+            case 1: {
+                listCustomer[chooseDisplay][0] = prompt("input name");
+                break;
+            }
+            case 2: {
+                listCustomer[chooseDisplay][1] = prompt("input cmnd");
+                break;
+            }
+            case 3: {
+                listCustomer[chooseDisplay][2] = prompt("input birthday");
+                break;
+            }
+            case 4: {
+                listCustomer[chooseDisplay][3] = prompt("input Email");
+                break;
+            }
+            case 5: {
+                listCustomer[chooseDisplay][4] = prompt("input adress");
+                break;
+            }
+            case 6: {
+                listCustomer[chooseDisplay][5] = prompt("input typecustomer");
+                break;
+            }
+            case 7: {
+                listCustomer[chooseDisplay][6] = prompt("input typeroom");
+                break;
+            }
+            case 8: {
+                listCustomer[chooseDisplay][7] = prompt("input typeservice");
+                break;
+            }
+            case 9: {
+                listCustomer[chooseDisplay][8] = prompt("input discount");
+                break;
+            }
+            case 10: {
+                listCustomer[chooseDisplay][9] = prompt("input partner");
+                break;
+            }
+            case 11: {
+                listCustomer[chooseDisplay][10] = prompt("input rendday");
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
+        }
+        editCustomer();
+    }
+
+    function deleteCustomer() {
+        let temp = "";
+        for (let i = 0; i < listCustomer.length; i++) {
+            temp += i + ".Name:" + listCustomer[i][0] + "\n";
+        }
+        let chooseDelete = parseInt(prompt(temp));
+        let check = parseInt(prompt("ban that su muon xoa Customer?" + "\n1.Yes" + "\n2.No"));
+        if (check === 1) {
+            listCustomer.splice(chooseDelete, 1);
+            alert("ban da xoa thanh cong");
+        } else {
+            alert("cancel");
+        }
+        displayMainMenu();
+    }
+
+    displayMainMenu();
+</script>
+</body>
+</html>

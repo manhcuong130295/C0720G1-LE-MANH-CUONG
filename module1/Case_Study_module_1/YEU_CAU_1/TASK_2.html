@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name = prompt("input name");
+    let cmnd = prompt("input cmnd");
+    let birthday = prompt("input birthday");
+    let email = prompt("input email");
+    let adress = prompt("input adress");
+    let typeService = prompt("input typeservice");
+    let typeRoom = prompt("input typeroom");
+    let typeCustomer = prompt("input typecustomer ");
+    let disCount = prompt("input discount");
+    let partner = prompt("input partner");
+    let rendDay = prompt("input rendday");
+    let totalPay;
+    if (typeService == 'Villa') {
+        totalPay = 500 * rendDay * (1 - disCount / 100);
+    } else if (typeService == 'House') {
+        totalPay = 300 * rendDay * (1 - disCount / 100);
+    } else {
+        totalPay = 100 * rendDay * (1 - disCount / 100);
+    }
+    alert("Name" + name);
+    alert("Cmnd" + cmnd);
+    alert("Birthday" + birthday);
+    alert("Email" + email);
+    alert("Adress" + adress);
+    alert("Typeservice" + typeService);
+    alert("Typeroom" + typeRoom);
+    alert("Typecustomer" + typeCustomer);
+    alert("Discount" + disCount);
+    alert("Partner" + partner);
+    alert("Rendday" + rendDay);
+    alert("Toatal" + totalPay);
+</script>
+</body>
+</html>
